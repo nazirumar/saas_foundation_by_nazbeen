@@ -60,7 +60,7 @@ RUN python manage.py collectstatic --noinput
 ARG PROJ_NAME="nazhome"
 
 # create a bash script to run the Django project
-# this script will execute at runtime when
+# this script will execute at runtime when 
 # the container starts and the database is available
 RUN printf "#!/bin/bash\n" > ./paracord_runner.sh && \
     printf "RUN_PORT=\"\${PORT:-8000}\"\n\n" >> ./paracord_runner.sh && \
